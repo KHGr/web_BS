@@ -20,14 +20,14 @@ body
 }
 
 .diyw #page {
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/page_bg.png) repeat-y top left;
+	background: url(/images/page_bg.png) repeat-y top left;
 	width: 730px;
 	padding: 0 105px 0 125px;
 	margin: 0 auto;
 }
 
 * html .diyw #page {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://s337886802.website-start.de/s/img/page_bg.png", enabled='true', sizingMethod='scale');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/page_bg.png", enabled='true', sizingMethod='scale');
 	background: none;
 }
 
@@ -56,14 +56,14 @@ body
 
 .diyw #footer {
 	clear: both;
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/footer_bg.png) no-repeat top left;
+	background: url(/images/footer_bg.png) no-repeat top left;
 	width: 455px;
 	height: 18px;
 	padding: 54px 380px 54px 125px;
 }
 
 * html .diyw #footer {
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://s337886802.website-start.de/s/img/footer_bg.png", enabled='true', sizingMethod='scale');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/footer_bg.png", enabled='true', sizingMethod='scale');
 	background: none;
 }
 
@@ -91,14 +91,14 @@ body
 }
 
 .diyw #menu ul li {
-	background: #de1411 url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/main_nav_01.png) no-repeat top left;
+	background: #de1411 url(/images/main_nav_01.png) no-repeat top left;
 	display: inline;
 	float: left;
 	padding: 0;
 }
 
 * html .diyw #menu ul li {
-	background: #de1411 url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/main_nav_01.gif) no-repeat top left;
+	background: #de1411 url(/images/main_nav_01.gif) no-repeat top left;
 }
 
 .diyw #menu ul li a {
@@ -113,13 +113,13 @@ body
 
 .diyw #menu ul li a:hover,
 .diyw #menu ul li a.current {
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/main_nav_02.png) no-repeat top right;
+	background: url(/images/main_nav_02.png) no-repeat top right;
 	color: #ffffff;
 }
 
 * html .diyw #menu ul li a:hover, 
 * html .diyw #menu ul li a.current {
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/main_nav_02.gif) no-repeat top right;
+	background: url(/images/main_nav_02.gif) no-repeat top right;
 }
 
 
@@ -166,7 +166,7 @@ body
 .diyw ul.mainNav2 li a.current,
 .diyw ul.mainNav3 li a:hover,
 .diyw ul.mainNav3 li a.current {
-	background: #de1411 url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/sub_nav_active.png) repeat left top;
+	background: #de1411 url(/images/sub_nav_active.png) repeat left top;
 	color: #de1411;
 }
 
@@ -196,7 +196,7 @@ body
 }
 
 .diyw #header_overlay_top{
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/header_overlay_top.png) no-repeat top left;
+	background: url(/images/header_overlay_top.png) no-repeat top left;
 	width: 960px;
 	height: 27px;
 	position: absolute;
@@ -206,12 +206,12 @@ body
 }
 
 * html .diyw #header_overlay_top{
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://s337886802.website-start.de/s/img/header_overlay_top.png", enabled='true', sizingMethod='crop');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/header_overlay_top.png", enabled='true', sizingMethod='crop');
 	background: none;
 }
 
 .diyw #header_overlay_left{
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/header_overlay_left.png) no-repeat top left;
+	background: url(/images/header_overlay_left.png) no-repeat top left;
 	width: 172px;
 	height: 129px;
 	position: absolute;
@@ -221,12 +221,12 @@ body
 }
 
 * html .diyw #header_overlay_left{
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://s337886802.website-start.de/s/img/header_overlay_left.png", enabled='true', sizingMethod='crop');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/header_overlay_left.png", enabled='true', sizingMethod='crop');
 	background: none;
 }
 
 .diyw #header_overlay_right{
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/header_overlay_right.png) no-repeat top left;
+	background: url(/images/header_overlay_right.png) no-repeat top left;
 	width: 306px;
 	height: 129px;
 	position: absolute;
@@ -236,12 +236,12 @@ body
 }
 
 * html .diyw #header_overlay_right{
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://s337886802.website-start.de/s/img/header_overlay_right.png", enabled='true', sizingMethod='crop');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/header_overlay_right.png", enabled='true', sizingMethod='crop');
 	background: none;
 }
 
 .diyw #header_overlay_bottom{
-	background: url(https://web.archive.org/web/20181125122855im_/http://s337886802.website-start.de/s/img/header_overlay_bottom.png) no-repeat top left;
+	background: url(/images/header_overlay_bottom.png) no-repeat top left;
 	width: 960px;
 	height: 14px;
 	position: absolute;
@@ -251,7 +251,7 @@ body
 }
 
 * html .diyw #header_overlay_bottom{
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://s337886802.website-start.de/s/img/header_overlay_bottom.png", enabled='true', sizingMethod='crop');
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/header_overlay_bottom.png", enabled='true', sizingMethod='crop');
 	background: none;
 }
 
