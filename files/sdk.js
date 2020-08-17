@@ -1,17 +1,3 @@
-var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
-if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
-{
-  let window = _____WB$wombat$assign$function_____("window");
-  let self = _____WB$wombat$assign$function_____("self");
-  let document = _____WB$wombat$assign$function_____("document");
-  let location = _____WB$wombat$assign$function_____("location");
-  let top = _____WB$wombat$assign$function_____("top");
-  let parent = _____WB$wombat$assign$function_____("parent");
-  let frames = _____WB$wombat$assign$function_____("frames");
-  let opener = _____WB$wombat$assign$function_____("opener");
-
-/*1485201801,,JIT Construction: v2791419,de_DE*/
-
 /**
  * Copyright Facebook Inc.
  *
@@ -172,25 +158,3 @@ __d('sdk.XFBML.ShareButton',['IframePlugin','sdk.UA','sdk.ui'],function a(b,c,d,
 __d('sdk.XFBML.Video',['Assert','sdk.Event','IframePlugin','ObservableMixin','sdk.XD'],function a(b,c,d,e,f,g,h,i,j,k,l){function m(p){'use strict';this.$VideoCache1=p.isMuted;this.$VideoCache2=p.volume;this.$VideoCache3=p.timePosition;this.$VideoCache4=p.duration;}m.prototype.update=function(p){'use strict';if(p.isMuted!==undefined)this.$VideoCache1=p.isMuted;if(p.volume!==undefined)this.$VideoCache2=p.volume;if(p.timePosition!==undefined)this.$VideoCache3=p.timePosition;if(p.duration!==undefined)this.$VideoCache4=p.duration;};m.prototype.isMuted=function(){'use strict';return this.$VideoCache1;};m.prototype.getVolume=function(){'use strict';return this.$VideoCache1?0:this.$VideoCache2;};m.prototype.getCurrentPosition=function(){'use strict';return this.$VideoCache3;};m.prototype.getDuration=function(){'use strict';return this.$VideoCache4;};function n(p,q,r){'use strict';this.$VideoController1=p;this.$VideoController2=q;this.$VideoController3=r;}n.prototype.play=function(){'use strict';l.sendToFacebook(this.$VideoController1,{method:'play',params:ES('JSON','stringify',false,{})});};n.prototype.pause=function(){'use strict';l.sendToFacebook(this.$VideoController1,{method:'pause',params:ES('JSON','stringify',false,{})});};n.prototype.seek=function(p){'use strict';h.isNumber(p,'Invalid argument');l.sendToFacebook(this.$VideoController1,{method:'seek',params:ES('JSON','stringify',false,{target:p})});};n.prototype.mute=function(){'use strict';l.sendToFacebook(this.$VideoController1,{method:'mute',params:ES('JSON','stringify',false,{})});};n.prototype.unmute=function(){'use strict';l.sendToFacebook(this.$VideoController1,{method:'unmute',params:ES('JSON','stringify',false,{})});};n.prototype.setVolume=function(p){'use strict';h.isNumber(p,'Invalid argument');l.sendToFacebook(this.$VideoController1,{method:'setVolume',params:ES('JSON','stringify',false,{volume:p})});};n.prototype.isMuted=function(){'use strict';return this.$VideoController3.isMuted();};n.prototype.getVolume=function(){'use strict';return this.$VideoController3.getVolume();};n.prototype.getCurrentPosition=function(){'use strict';return this.$VideoController3.getCurrentPosition();};n.prototype.getDuration=function(){'use strict';return this.$VideoController3.getDuration();};n.prototype.subscribe=function(event,p){'use strict';h.isString(event,'Invalid argument');h.isFunction(p,'Invalid argument');this.$VideoController2.subscribe(event,p);return {release:ES(function(){this.$VideoController2.unsubscribe(event,p);},'bind',true,this)};};var o=j.extend({constructor:function p(q,r,s,t){this.parent(q,r,s,t);this._videoController=null;this._sharedObservable=null;this._sharedVideoCache=null;this.subscribe('xd.onVideoAPIReady',function(u){this._sharedObservable=new k();this._sharedVideoCache=new m(ES('JSON','parse',false,u.data));this._videoController=new n(this._iframeOptions.name,this._sharedObservable,this._sharedVideoCache);i.fire('xfbml.ready',{type:'video',id:t.id,instance:this._videoController});});this.subscribe('xd.stateChange',function(u){this._sharedObservable.inform(u.state);});this.subscribe('xd.cachedStateUpdateRequest',function(u){this._sharedVideoCache.update(ES('JSON','parse',false,u.data));});},getParams:function p(){return {allowfullscreen:'bool',autoplay:'bool',controls:'bool',href:'url',show_captions:'bool',show_text:'bool'};},getConfig:function p(){return {fluid:true,full_width:true};}});f.exports=o;},null);
 __d('legacy:fb.xfbml',['Assert','sdk.Event','FB','IframePlugin','PluginConfig','PluginTags','XFBML','sdk.domReady','sdk.feature','wrapFunction','sdk.XFBML.Comments','sdk.XFBML.CommentsCount','sdk.XFBML.LoginButton','sdk.XFBML.Name','sdk.XFBML.Quote','sdk.XFBML.Save','sdk.XFBML.ShareButton','sdk.XFBML.Video'],function a(b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q){var r={comments:c('sdk.XFBML.Comments'),comments_count:c('sdk.XFBML.CommentsCount'),login_button:c('sdk.XFBML.LoginButton'),name:c('sdk.XFBML.Name'),quote:c('sdk.XFBML.Quote'),save:c('sdk.XFBML.Save'),share_button:c('sdk.XFBML.ShareButton'),video:c('sdk.XFBML.Video')},s=p('plugin_tags_blacklist',[]);ES(ES('Object','keys',false,m),'forEach',true,function(u){if(ES(s,'indexOf',true,u)!==-1)return;n.registerTag({xmlns:'fb',localName:u.replace(/_/g,'-'),ctor:k.withParams(m[u],l[u])});});ES(ES('Object','keys',false,r),'forEach',true,function(u){if(ES(s,'indexOf',true,u)!==-1)return;n.registerTag({xmlns:'fb',localName:u.replace(/_/g,'-'),ctor:r[u]});});j.provide('XFBML',{parse:function u(v){h.maybeXfbml(v,'Invalid argument');if(v&&v.nodeType===9)v=v.body;return n.parse.apply(null,arguments);}});n.subscribe('parse',ES(i.fire,'bind',true,i,'xfbml.parse'));n.subscribe('render',ES(i.fire,'bind',true,i,'xfbml.render'));i.subscribe('init:post',function(u){if(u.xfbml)setTimeout(q(ES(o,'bind',true,null,n.parse),'entry','init:post:xfbml.parse'),0);});h.define('Xfbml',function(u){return (u.nodeType===1||u.nodeType===9)&&typeof u.nodeName==='string';});try{if(document.namespaces&&!document.namespaces.item.fb)document.namespaces.add('fb');}catch(t){}},3);
     }  }).call(global);})(window.inDapIF ? parent.window : window, window);} catch (e) {new Image().src="https:\/\/web.archive.org\/web\/20170123201947\/https:\/\/www.facebook.com\/" + 'common/scribe_endpoint.php?c=jssdk_error&m='+encodeURIComponent('{"error":"LOAD", "extra": {"name":"'+e.name+'","line":"'+(e.lineNumber||e.line)+'","script":"'+(e.fileName||e.sourceURL||e.script)+'","stack":"'+(e.stackTrace||e.stack)+'","revision":"2791419","namespace":"FB","message":"'+e.message+'"}}');}
-
-}
-/*
-     FILE ARCHIVED ON 20:19:47 Jan 23, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 20:32:55 Aug 13, 2020.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  PetaboxLoader3.datanode: 221.61 (7)
-  exclusion.robots.policy: 0.187
-  exclusion.robots: 0.204
-  esindex: 0.017
-  CDXLines.iter: 192.714 (3)
-  RedisCDXSource: 25.984
-  load_resource: 363.2
-  PetaboxLoader3.resolve: 264.653
-  LoadShardBlock: 287.889 (6)
-*/
