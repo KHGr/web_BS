@@ -53,7 +53,7 @@ function drawmap() {
     layer_markers = new OpenLayers.Layer.Markers("Address", { projection: new OpenLayers.Projection("EPSG:4326"), 
     	                                          visibility: true, displayInLayerSwitcher: false });
 
-    map.addLayers([layer_mapnik, layer_markers]);
+    map.addLayers([layer_mapnik, layer_markers]); 
     jumpTo(lon, lat, zoom);
  
     // Position des Markers
